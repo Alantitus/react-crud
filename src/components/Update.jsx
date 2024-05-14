@@ -14,7 +14,7 @@ function Update() {
     
     
     useEffect(()=>{
-        axios.get('http://localhost:3000/users/'+id)
+        axios.get('https://crud-server-9sdt.onrender.com/users'+id)
         .then(res=>{
             setValues(res.data)
         })
@@ -23,7 +23,7 @@ function Update() {
 
     const handleUpdate=(event)=>{
         event.preventDefault()
-        axios.put('http://localhost:3000/users/'+id,values)
+        axios.put('https://crud-server-9sdt.onrender.com/users'+id,values)
         navigate('/')
     }
   return (
